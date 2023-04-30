@@ -76,3 +76,6 @@ yarn-error.log
 /src/main/ui/libpeerconnection.log
 testem.log
 /src/main/ui/typings
+
+# sensitive data
+/src/main/ui/src/environments/environment.development.ts
