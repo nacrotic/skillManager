@@ -1,24 +1,78 @@
-# Compiled class file
-*.class
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Log file
-*.log
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# BlueJ files
-*.ctxt
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+### VS Code ###
+.vscode/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+### Mac OS ###
+.DS_Store
+Thumbs.db
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/src/main/ui/dist
+/src/main/ui/tmp
+/src/main/ui/out-tsc
+/src/main/ui/bazel-out
+
+# Node
+/src/main/ui/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+/src/main/ui/.idea/
+/src/main/ui/.c9/
+*.launch
+/src/main/ui/.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+/src/main/ui/.vscode/*
+!/src/main/ui/.vscode/settings.json
+!/src/main/ui/.vscode/tasks.json
+!/src/main/ui/.vscode/launch.json
+!/src/main/ui/.vscode/extensions.json
+/src/main/ui/.history/*
+
+# Miscellaneous
+/src/main/ui/.angular/cache
+.sass-cache/
+/src/main/ui/connect.lock
+/src/main/ui/coverage
+/src/main/ui/libpeerconnection.log
+testem.log
+/src/main/ui/typings
