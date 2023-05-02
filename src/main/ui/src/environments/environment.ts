@@ -3,5 +3,8 @@ export const environment = {
         "clientId": "TO_SET",
         "authority": "TO_SET",
         "redirectUri": "TO_SET",
+    },
+    "graph": {
+        "endpoint": "TO_SET",
     }
 };
