@@ -15,6 +15,7 @@ import { MeModule } from './me/me.module';
 import { HomeModule } from './home/home.module';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
@@ -28,9 +29,9 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     BrowserAnimationsModule,
     MsalModule.forRoot(new PublicClientApplication({
       auth: {
-        clientId: environment.azure.clientId,
-        authority: environment.azure.authority,
-        redirectUri: environment.azure.redirectUri,
+        clientId: environment.microsoft.azure.clientId,
+        authority: environment.microsoft.azure.authority,
+        redirectUri: environment.microsoft.azure.redirectUri,
       },
       cache: {
         cacheLocation: 'localStorage',
@@ -44,7 +45,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     }, {
       interactionType: InteractionType.Redirect, // MSAL Interceptor Configuration
       protectedResourceMap: new Map([
-        [environment.graph.endpoint, ['user.read']]
+        [environment.microsoft.graph.endpoint, ['user.read']],
+        [environment.backend.url, ['api://sample-skills/.default']]
       ])
     }),
     MatToolbarModule,
@@ -53,6 +55,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     MeModule,
     HomeModule,
     RouterModule,
+    SharedModule,
   ],
   providers: [
     {

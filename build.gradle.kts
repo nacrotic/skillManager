@@ -33,6 +33,8 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.mariadb.jdbc:mariadb-java-client:3.1.3")
+	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+	implementation("ch.qos.logback:logback-classic")
 
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")

@@ -1,1 +1,16 @@
 <p>list-skills works!</p>
+
+<mat-table [dataSource]="skills" class="mat-elevation-z8">
+    <ng-container matColumnDef="label">
+        <mat-header-cell *matHeaderCellDef>Libelle</mat-header-cell>
+        <mat-cell *matCellDef="let skill">{{skill.label}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+        <mat-header-cell *matHeaderCellDef>Détails</mat-header-cell>
+        <mat-cell *matCellDef="let skill">{{skill.details}}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

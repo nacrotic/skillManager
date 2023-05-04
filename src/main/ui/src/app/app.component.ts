@@ -47,7 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   logout() { // Add log out function here
     this.authService.logoutRedirect({
-      postLogoutRedirectUri: environment.azure.redirectUri
+      postLogoutRedirectUri: environment.microsoft.azure.redirectUri
     });
   }
 

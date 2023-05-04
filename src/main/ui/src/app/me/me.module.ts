@@ -4,6 +4,7 @@ import { MeRoutingModule } from './me-routing.module';
 import { ListSkillsComponent } from './list-skills/list-skills.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table'
 
 
 
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     MeRoutingModule,
     HttpClientModule,
+    MatTableModule,
   ]
 })
 export class MeModule { }
